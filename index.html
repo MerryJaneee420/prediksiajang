@@ -14,21 +14,20 @@ font-family:Arial, sans-serif;
 }
 
 body{
-background:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1920') center/cover no-repeat fixed;
-min-height:100vh;
-position:relative;
-color:white;
+.bg::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: url("stadium.png") center/cover;
+  animation: moveBg 20s linear infinite;
+  opacity: 0.8;
 }
 
-body::before{
-content:'';
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.75);
-z-index:-1;
+@keyframes moveBg {
+  0% { transform: translate3d(0,0,0) scale(1.1); }
+  50% { transform: translate3d(-50px,-20px,0) scale(1.2); }
+  100% { transform: translate3d(0,0,0) scale(1.1); }
 }
 
 .container{
