@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIALA DUNIA 2026 | AJANSGLOT</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1920') center/cover no-repeat fixed;
+min-height:100vh;
+position:relative;
+color:white;
+}
+
+body::before{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+z-index:-1;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.header{
+text-align:center;
+padding:30px 0;
+animation:slideDown 1.5s ease;
+}
+
+.header h1{
+font-size:48px;
+font-weight:bold;
+color:#ffd700;
+text-shadow:0 0 20px #ffd700;
+animation:glow 2s infinite alternate;
+}
+
+.marquee{
+margin-top:10px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:marquee 15s linear infinite;
+font-size:18px;
+color:#fff;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:20px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 0 20px rgba(255,255,255,0.15);
+animation:fadeIn 1s ease;
+}
+
+.btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+background:linear-gradient(45deg,#ffd700,#ffb300);
+color:#000;
+transition:0.4s;
+}
+
+.btn:hover{
+transform:scale(1.03);
+box-shadow:0 0 20px gold;
+}
+
+.content{
+display:none;
+padding:15px;
+line-height:2;
+font-size:16px;
+animation:fadeIn 0.5s ease;
+}
+
+.link-btn{
+display:block;
+text-decoration:none;
+text-align:center;
+padding:15px;
+margin:10px 0;
+border-radius:15px;
+font-weight:bold;
+font-size:18px;
+color:white;
+transition:.4s;
+}
+
+.link-btn:hover{
+transform:translateY(-3px);
+}
+
+.site{
+background:#e53935;
+}
+
+.rtp{
+background:#43a047;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.telegram{
+background:#0088cc;
+}
+
+.facebook{
+background:#1877F2;
+}
+
+.pinterest{
+background:#E60023;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+font-size:18px;
+font-weight:bold;
+color:#ffd700;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px gold;
+}
+to{
+text-shadow:0 0 30px gold;
+}
+}
+
+@keyframes marquee{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>🏆 PIALA DUNIA 2026 🏆</h1>
+
+<div class="marquee">
+<span>
+JADWAL • PREDIKSI • BERITA TERBARU • PIALA DUNIA FIFA 2026 • AJANGSLOT
+</span>
+</div>
+</div>
+
+<div class="card">
+
+<button class="btn" onclick="toggleContent('jadwal')">
+📅 JADWAL PERTANDINGAN
+</button>
+
+<div id="jadwal" class="content">
+06/06 04:00 WIB Jamaica vs South Africa 0 : 1/4<br>
+06/06 05:15 WIB Paraguay vs Nicaragua 0 : 1 1/2<br>
+06/06 06:00 WIB Saudi Arabia vs Puerto Rico 0 : 1 1/2<br>
+06/06 06:30 WIB Canada vs Ireland 0 : 1/4<br>
+06/06 07:00 WIB Haiti vs Peru 1/4 : 0<br>
+06/06 11:00 WIB Vanuatu vs Fiji 1/4 : 0
+</div>
+
+<button class="btn" onclick="toggleContent('prediksi')">
+⚽ PREDIKSI PERTANDINGAN
+</button>
+
+<div id="prediksi" class="content">
+06/06 04:00 WIB Jamaica 1 vs 2 South Africa 0 : 1/4<br>
+06/06 05:15 WIB Paraguay 3 vs 0 Nicaragua 0 : 1 1/2<br>
+06/06 06:00 WIB Saudi Arabia 2 vs 0 Puerto Rico 0 : 1 1/2<br>
+06/06 06:30 WIB Canada 2 vs 1 Ireland 0 : 1/4<br>
+06/06 07:00 WIB Haiti 1 vs 2 Peru 1/4 : 0<br>
+06/06 11:00 WIB Vanuatu 2 vs 1 Fiji 1/4 : 0
+</div>
+
+<button class="btn" onclick="toggleContent('berita')">
+📰 BERITA PILDUN 2026
+</button>
+
+<div id="berita" class="content">
+<a href="https://www.fifa.com/id/tournaments/mens/worldcup/canadamexicousa2026"
+target="_blank" style="color:gold;">
+KLIK DISINI UNTUK MEMBACA BERITA RESMI FIFA
+</a>
+</div>
+
+</div>
+
+<a href="https://heylink.me/Ajangvvip" target="_blank" class="link-btn site">
+🔗 LINK MASUK SITUS
+</a>
+
+<a href="https://ertepe.luvtoberi.com/index.html?rtp=ajangslot"
+target="_blank" class="link-btn rtp">
+🎰 RTP LIVE SLOT
+</a>
+
+<a href="https://wa.me/+6285199606371"
+target="_blank" class="link-btn whatsapp">
+📱 WHATSAPP
+</a>
+
+
+<div class="footer">
+PIALADUNIA 2026 by ajangslot
+</div>
+
+</div>
+
+<script>
+function toggleContent(id){
+var content=document.getElementById(id);
+
+if(content.style.display==="block"){
+content.style.display="none";
+}else{
+content.style.display="block";
+}
+}
+</script>
+
+</body>
+</html>
