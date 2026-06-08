@@ -17,45 +17,51 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #0a2e6b, #1e90ff, #ffd700);
 }
 
-/* BACKGROUND UTAMA */
+/* BACKGROUND STADIUM */
 .bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("stadium.jpg") center/cover no-repeat;
-  transform: scale(1.1);
-  filter: brightness(0.6);
+  background:
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  transform: scale(1.05);
+  filter: brightness(0.75) saturate(1.2) contrast(1.1);
   z-index: -2;
+  animation: zoomBg 20s infinite alternate ease-in-out;
 }
 
-/* efek gelap + glow */
+/* overlay elegan cerah */
 .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+  background: radial-gradient(
+    circle,
+    rgba(0, 80, 180, 0.25),
+    rgba(0, 0, 0, 0.65)
+  );
   z-index: -1;
 }
 
-/* efek "depth" untuk card */
-.content {
-  perspective: 1000px;
+/* animasi background */
+@keyframes zoomBg {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.15); }
 }
 
-@keyframes moveBg {
-  0% { transform: translate3d(0,0,0) scale(1.1); }
-  50% { transform: translate3d(-50px,-20px,0) scale(1.2); }
-  100% { transform: translate3d(0,0,0) scale(1.1); }
-}
-
+/* container */
 .container{
 max-width:900px;
 margin:auto;
 padding:20px;
+position:relative;
+z-index:1;
 }
 
 .header{
@@ -141,29 +147,12 @@ transition:.4s;
 transform:translateY(-3px);
 }
 
-.site{
-background:#e53935;
-}
-
-.rtp{
-background:#43a047;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.telegram{
-background:#0088cc;
-}
-
-.facebook{
-background:#1877F2;
-}
-
-.pinterest{
-background:#E60023;
-}
+.site{background:#e53935;}
+.rtp{background:#43a047;}
+.whatsapp{background:#25D366;}
+.telegram{background:#0088cc;}
+.facebook{background:#1877F2;}
+.pinterest{background:#E60023;}
 
 .footer{
 text-align:center;
@@ -175,13 +164,10 @@ color:#ffd700;
 animation:glow 2s infinite alternate;
 }
 
+/* animasi */
 @keyframes glow{
-from{
-text-shadow:0 0 10px gold;
-}
-to{
-text-shadow:0 0 30px gold;
-}
+from{ text-shadow:0 0 10px gold; }
+to{ text-shadow:0 0 30px gold; }
 }
 
 @keyframes marquee{
@@ -190,28 +176,22 @@ text-shadow:0 0 30px gold;
 }
 
 @keyframes slideDown{
-from{
-opacity:0;
-transform:translateY(-50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+from{opacity:0; transform:translateY(-50px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 @keyframes fadeIn{
-from{
-opacity:0;
-}
-to{
-opacity:1;
-}
+from{opacity:0;}
+to{opacity:1;}
 }
 </style>
 </head>
 
 <body>
+
+<!-- BACKGROUND -->
+<div class="bg"></div>
+<div class="overlay"></div>
 
 <div class="container">
 
@@ -245,12 +225,12 @@ JADWAL • PREDIKSI • BERITA TERBARU • PIALA DUNIA FIFA 2026 • AJANGSLOT
 </button>
 
 <div id="prediksi" class="content">
-06/06 04:00 WIB Jamaica 1 vs 2 South Africa 0 : 1/4<br>
-06/06 05:15 WIB Paraguay 3 vs 0 Nicaragua 0 : 1 1/2<br>
-06/06 06:00 WIB Saudi Arabia 2 vs 0 Puerto Rico 0 : 1 1/2<br>
-06/06 06:30 WIB Canada 2 vs 1 Ireland 0 : 1/4<br>
-06/06 07:00 WIB Haiti 1 vs 2 Peru 1/4 : 0<br>
-06/06 11:00 WIB Vanuatu 2 vs 1 Fiji 1/4 : 0
+06/06 04:00 WIB Jamaica 1 vs 2 South Africa<br>
+06/06 05:15 WIB Paraguay 3 vs 0 Nicaragua<br>
+06/06 06:00 WIB Saudi Arabia 2 vs 0 Puerto Rico<br>
+06/06 06:30 WIB Canada 2 vs 1 Ireland<br>
+06/06 07:00 WIB Haiti 1 vs 2 Peru<br>
+06/06 11:00 WIB Vanuatu 2 vs 1 Fiji
 </div>
 
 <button class="btn" onclick="toggleContent('berita')">
@@ -258,15 +238,12 @@ JADWAL • PREDIKSI • BERITA TERBARU • PIALA DUNIA FIFA 2026 • AJANGSLOT
 </button>
 
 <div id="berita" class="content">
-<a href="https://www.fifa.com/id/tournaments/mens/worldcup/canadamexicousa2026"
-target="_blank" style="color:gold;">
 <div style="text-align:center;">
-    <a href="https://www.fifa.com"
-       style="color:#ffd700;text-decoration:underline;">
-       KLIK DISINI UNTUK MEMBACA BERITA RESMI FIFA
-    </a>
+<a href="https://www.fifa.com"
+style="color:#ffd700;text-decoration:underline;">
+KLIK DISINI UNTUK MEMBACA BERITA RESMI FIFA
+</a>
 </div>
-
 </div>
 
 <a href="https://heylink.me/Ajangvvip" target="_blank" class="link-btn site">
@@ -283,7 +260,6 @@ target="_blank" class="link-btn whatsapp">
 📱 WHATSAPP
 </a>
 
-
 <div class="footer">
 PIALADUNIA 2026 by AJANGSLOT
 </div>
@@ -293,12 +269,7 @@ PIALADUNIA 2026 by AJANGSLOT
 <script>
 function toggleContent(id){
 var content=document.getElementById(id);
-
-if(content.style.display==="block"){
-content.style.display="none";
-}else{
-content.style.display="block";
-}
+content.style.display = (content.style.display==="block") ? "none" : "block";
 }
 </script>
 
