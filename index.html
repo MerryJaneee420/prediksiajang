@@ -13,15 +13,37 @@ box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
 
-body{
-.bg::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: url("stadium.png") center/cover;
-  animation: moveBg 20s linear infinite;
-  opacity: 0.8;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND UTAMA */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("stadium.jpg") center/cover no-repeat;
+  transform: scale(1.1);
+  filter: brightness(0.6);
+  z-index: -2;
+}
+
+/* efek gelap + glow */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+  z-index: -1;
+}
+
+/* efek "depth" untuk card */
+.content {
+  perspective: 1000px;
 }
 
 @keyframes moveBg {
